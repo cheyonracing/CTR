@@ -1,0 +1,329 @@
+{
+  "site": {
+    "name": "Chennai Turbo Riders",
+    "abbreviation": "CTR",
+    "tagline": "India's Premier Racing Team",
+    "description": "Professional Racing Team with Chennai Based & International Drivers",
+    "founded": 2022,
+    "headquarters": "Chennai, Tamil Nadu, India",
+    "currentSeason": 4,
+    "championship": "Indian Racing League (IRL)",
+    "officialWebsite": "https://www.chennaiturboriders.in"
+  },
+  "teamPrincipal": {
+    "name": "Keerthivasan S",
+    "title": "Team Principal",
+    "image": "/images/team/keerthivasan.jpg"
+  },
+  "socialMedia": {
+    "instagram": "https://www.instagram.com/chennaiturboriders/",
+    "facebook": "https://www.facebook.com/chennaiturboriders",
+    "twitter": "https://twitter.com/chennaiturbo",
+    "youtube": "https://www.youtube.com/@chennaiturboriders"
+  },
+  "contact": {
+    "email": "info@chennaiturboriders.in",
+    "phone": "+91 XXXXX XXXXX",
+    "address": "Chennai, Tamil Nadu, India"
+  },
+  "car": {
+    "name": "CTR-25",
+    "year": 2025,
+    "image": "/images/car/ctr-25.png"
+  },
+  "drivers": [
+    {
+      "id": "jon-lancaster",
+      "firstName": "Jon",
+      "lastName": "Lancaster",
+      "nationality": "United Kingdom",
+      "countryCode": "GB",
+      "flagEmoji": "🇬🇧",
+      "number": 7,
+      "dateOfBirth": "1988-07-04",
+      "height": "1.78 M",
+      "weight": "72 KG",
+      "image": "/images/drivers/jon-lancaster.jpg",
+      "heroImage": "/images/drivers/jon-lancaster-hero.jpg",
+      "quote": "Racing in India has been an incredible experience, the fans here are passionate and the circuits are challenging.",
+      "biography": "Jon Lancaster is an experienced British racing driver who has competed in various international championships including Formula 2 and GP2. He brings valuable expertise and speed to Chennai Turbo Riders, serving as both a competitive driver and mentor to younger team members.",
+      "stats": {
+        "raceWins": 8,
+        "polePositions": 6,
+        "grandPrix": 45,
+        "podiums": 18,
+        "fastestLaps": 5,
+        "points": 342
+      },
+      "careerHighlights": [
+        "Multiple race winner in IRL",
+        "Experienced in Formula 2 and GP2",
+        "International racing expertise"
+      ]
+    },
+    {
+      "id": "mohamed-ryan",
+      "firstName": "Mohamed",
+      "lastName": "Ryan",
+      "nationality": "India",
+      "countryCode": "IN",
+      "flagEmoji": "🇮🇳",
+      "number": 23,
+      "dateOfBirth": "1999-03-15",
+      "height": "1.75 M",
+      "weight": "68 KG",
+      "image": "/images/drivers/mohamed-ryan.jpg",
+      "heroImage": "/images/drivers/mohamed-ryan-hero.jpg",
+      "quote": "Representing my country in motorsport is a dream come true. Chennai Turbo Riders gave me this opportunity.",
+      "biography": "Mohamed Ryan is a rising star in Indian motorsport. Born and raised in India, he has shown exceptional talent and determination on the track, quickly establishing himself as one of the most promising young drivers in the country.",
+      "stats": {
+        "raceWins": 3,
+        "polePositions": 4,
+        "grandPrix": 28,
+        "podiums": 9,
+        "fastestLaps": 3,
+        "points": 186
+      },
+      "careerHighlights": [
+        "Youngest Indian F4 champion",
+        "Multiple IRL podiums",
+        "Chennai street circuit specialist"
+      ]
+    },
+    {
+      "id": "sandeep-kumar",
+      "firstName": "Sandeep",
+      "lastName": "Kumar",
+      "nationality": "India",
+      "countryCode": "IN",
+      "flagEmoji": "🇮🇳",
+      "number": 55,
+      "dateOfBirth": "1997-08-22",
+      "height": "1.72 M",
+      "weight": "65 KG",
+      "image": "/images/drivers/sandeep-kumar.jpg",
+      "heroImage": "/images/drivers/sandeep-kumar-hero.jpg",
+      "quote": "Speed runs in my blood. Every race is an opportunity to push beyond limits.",
+      "biography": "Sandeep Kumar is a talented Indian driver known for his aggressive driving style and consistent performances. He has been instrumental in CTR's success and holds the lap record at Kari Motor Speedway.",
+      "stats": {
+        "raceWins": 5,
+        "polePositions": 3,
+        "grandPrix": 32,
+        "podiums": 12,
+        "fastestLaps": 4,
+        "points": 224
+      },
+      "careerHighlights": [
+        "IRL Season 3 runner-up",
+        "Kari Motor Speedway lap record holder",
+        "Consistent podium finisher"
+      ]
+    },
+    {
+      "id": "emily-duggan",
+      "firstName": "Emily",
+      "lastName": "Duggan",
+      "nationality": "Australia",
+      "countryCode": "AU",
+      "flagEmoji": "🇦🇺",
+      "number": 18,
+      "dateOfBirth": "1996-11-30",
+      "height": "1.68 M",
+      "weight": "58 KG",
+      "image": "/images/drivers/emily-duggan.jpg",
+      "heroImage": "/images/drivers/emily-duggan-hero.jpg",
+      "quote": "Breaking barriers and setting records - that's what drives me every single day.",
+      "biography": "Emily Duggan is an Australian racing driver breaking barriers in motorsport. Her skill and determination have made her a fan favorite and a formidable competitor on any circuit.",
+      "stats": {
+        "raceWins": 2,
+        "polePositions": 2,
+        "grandPrix": 24,
+        "podiums": 7,
+        "fastestLaps": 3,
+        "points": 156
+      },
+      "careerHighlights": [
+        "First female driver in IRL",
+        "Australian Karting Champion",
+        "Rising star in Asian motorsport"
+      ]
+    }
+  ],
+  "races": {
+    "season": 4,
+    "seasonName": "Season 4 IRL",
+    "calendar": [
+      {
+        "round": 1,
+        "name": "Kari Motor Speedway",
+        "location": "Coimbatore",
+        "country": "India",
+        "flagEmoji": "🇮🇳",
+        "dateStart": "2025-08-16",
+        "dateEnd": "2025-08-17",
+        "circuitLength": "2.1 KM",
+        "laps": 25,
+        "isNightRace": false,
+        "isStreetCircuit": false
+      },
+      {
+        "round": 2,
+        "name": "Madras International Circuit",
+        "location": "Chennai",
+        "country": "India",
+        "flagEmoji": "🇮🇳",
+        "dateStart": "2025-08-23",
+        "dateEnd": "2025-08-25",
+        "circuitLength": "3.7 KM",
+        "laps": 22,
+        "isNightRace": false,
+        "isStreetCircuit": false
+      },
+      {
+        "round": 3,
+        "name": "Kari Motor Speedway",
+        "location": "Coimbatore",
+        "country": "India",
+        "flagEmoji": "🇮🇳",
+        "dateStart": "2025-10-04",
+        "dateEnd": "2025-10-05",
+        "circuitLength": "2.1 KM",
+        "laps": 25,
+        "isNightRace": false,
+        "isStreetCircuit": false
+      },
+      {
+        "round": 4,
+        "name": "Chennai Street Circuit",
+        "location": "Chennai",
+        "country": "India",
+        "flagEmoji": "🇮🇳",
+        "dateStart": "2025-11-01",
+        "dateEnd": "2025-11-02",
+        "circuitLength": "3.5 KM",
+        "laps": 20,
+        "isNightRace": true,
+        "isStreetCircuit": true,
+        "description": "India's 1st Street Circuit Night Race"
+      },
+      {
+        "round": 5,
+        "name": "Chennai Street Circuit",
+        "location": "Chennai",
+        "country": "India",
+        "flagEmoji": "🇮🇳",
+        "dateStart": "2025-11-29",
+        "dateEnd": "2025-11-30",
+        "circuitLength": "3.5 KM",
+        "laps": 20,
+        "isNightRace": true,
+        "isStreetCircuit": true,
+        "description": "Season Finale"
+      }
+    ],
+    "streetCircuit": {
+      "name": "Chennai Street Circuit",
+      "length": "3.5 KM",
+      "capacity": 10000,
+      "stands": 11,
+      "route": [
+        "Island Grounds (Start/Finish)",
+        "Flag Staff Road",
+        "Anna Salai",
+        "Sivananda Salai",
+        "Kamarajar Salai (Napier Bridge)",
+        "Island Grounds"
+      ],
+      "features": [
+        "India's 1st Street Circuit Night Race",
+        "Chennai's First F4 & IRL Night Street Race",
+        "Steel stands at 11 locations with safety measures",
+        "Capacity for 10,000 spectators"
+      ]
+    }
+  },
+  "sponsors": {
+    "title": [
+      {
+        "id": "bharath-college",
+        "name": "Bharath College",
+        "logo": "/Bharath_College_logo.png",
+        "fullLogo": "/Bharath_College_name.png",
+        "website": "https://bharathuniv.ac.in/",
+        "description": "Leading educational institution supporting motorsport excellence and youth development."
+      }
+    ],
+    "principal": [
+      {
+        "id": "medical-college",
+        "name": "Medical College",
+        "logo": "/Medical_College_logo.png",
+        "fullLogo": "/Medical_College_full.png",
+        "website": "#",
+        "description": "Premier medical institution partnering with CTR for healthcare and safety initiatives."
+      }
+    ],
+    "official": [
+      {
+        "id": "fmsci",
+        "name": "FMSCI",
+        "logo": "/fmsci_full.png",
+        "website": "https://www.fmsci.co.in/",
+        "description": "Federation of Motor Sports Clubs of India - governing body for motorsport in India."
+      },
+      {
+        "id": "fia",
+        "name": "FIA",
+        "logo": "/FiA.png",
+        "website": "https://www.fia.com/",
+        "description": "Fédération Internationale de l'Automobile - international governing body for motorsport."
+      },
+      {
+        "id": "f4",
+        "name": "Formula 4",
+        "logo": "/F4_logo.png",
+        "website": "https://www.fiaformula4.com/",
+        "description": "Formula 4 championship series providing the perfect platform for young drivers."
+      }
+    ],
+    "technical": []
+  },
+  "news": [
+    {
+      "id": "season-4-announcement",
+      "title": "Chennai Turbo Riders Announces Season 4 Lineup",
+      "slug": "season-4-lineup-announcement",
+      "publishDate": "2025-07-15",
+      "category": "Team News",
+      "image": "/CTR_yellow.png",
+      "excerpt": "CTR reveals its powerful driver lineup for the upcoming Season 4 of the Indian Racing League.",
+      "author": "CTR Team",
+      "content": "Chennai Turbo Riders is excited to announce our complete driver lineup for Season 4 of the Indian Racing League. Our team of talented drivers, including Jon Lancaster, Mohamed Ryan, Sandeep Kumar, and Emily Duggan, are ready to take on the challenges of the upcoming season.\n\nWith a mix of international experience and local talent, CTR aims to compete at the highest level and bring home victories for our fans. The season kicks off with the Chennai Street Circuit race, promising thrilling action on the streets of Chennai.",
+      "tags": ["season4", "drivers", "announcement"]
+    },
+    {
+      "id": "chennai-night-race",
+      "title": "India's First Street Circuit Night Race Coming to Chennai",
+      "slug": "chennai-night-race-announcement",
+      "publishDate": "2025-07-10",
+      "category": "Events",
+      "image": "/CTR_blue.png",
+      "excerpt": "Historic night race to be held on Chennai's streets with a 3.5 KM circuit.",
+      "author": "Race Director",
+      "content": "For the first time in Indian motorsport history, Chennai will host a night race on its famous street circuit. The 3.5 KM track will be illuminated with state-of-the-art lighting, creating a spectacular atmosphere for both drivers and spectators.\n\nThe night race format will test the skills of our drivers in unique conditions, with cooler temperatures and different visibility challenges. Fans can expect an unforgettable experience as the cars thunder through the city streets under the night sky.",
+      "tags": ["night-race", "chennai", "street-circuit"]
+    },
+    {
+      "id": "new-partnership",
+      "title": "CTR Partners with Bharath College",
+      "slug": "bharath-college-partnership",
+      "publishDate": "2025-06-20",
+      "category": "Partnership",
+      "image": "/Bharath_College_logo.png",
+      "excerpt": "Chennai Turbo Riders welcomes Bharath College as title sponsor.",
+      "author": "Partnership Manager",
+      "content": "Chennai Turbo Riders is proud to announce a new partnership with Bharath College as our title sponsor for Season 4. This collaboration represents our commitment to education and youth development in the motorsport community.\n\nBharath College's support will help us continue developing young talent and promoting motorsport education across India. Together, we aim to inspire the next generation of racing drivers and engineers.",
+      "tags": ["partnership", "bharath-college", "sponsorship"]
+    }
+  ]
+}
