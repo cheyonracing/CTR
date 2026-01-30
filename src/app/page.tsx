@@ -24,7 +24,7 @@ export default function Home() {
       {/* Hero Slider */}
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* season label remains above slider */}
-        <div style={{ position: 'absolute', left: '2rem', top: '2.5rem', zIndex: 2 }}>
+        <div style={{ position: 'absolute', left: '2rem', top: '5rem', zIndex: 2 }}>
           <p className="section-label">Season {races.season} • {races.seasonName}</p>
         </div>
         {/* slider component */}
@@ -38,7 +38,7 @@ export default function Home() {
             <div className="car-info">
               <p className="section-label">{car.year} Season Car</p>
               <h2 className="spaced-title-large">
-                C T R<br /><span>R A C E R</span>
+                CTR<br /><span>RACING</span>
               </h2>
               <p>
                 Experience the power and precision of Chennai Turbo Riders' racing machine. 
@@ -50,9 +50,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="car-image">
-              <div className="placeholder-img" style={{ height: '400px', borderRadius: '8px' }}>
-                🏎️ {car.name}
-              </div>
+              <img src={car.image} alt={car.name} style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '8px' }} />
             </div>
           </div>
         </div>
@@ -66,10 +64,12 @@ export default function Home() {
             <h2 className="spaced-title-large">O U R &nbsp; T E A M</h2>
           </div>
           
-          <div className="drivers-grid">
-            {drivers.map(driver => (
-              <DriverCard key={driver.id} driver={driver} />
-            ))}
+          <div className="drivers-scroll">
+            <div className="drivers-grid">
+              {drivers.map(driver => (
+                <DriverCard key={driver.id} driver={driver} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

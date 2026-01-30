@@ -7,13 +7,12 @@ interface Slide {
   id: string;
   image: string;
   title: string;
-  subtitle?: string;
 }
 
 const slides: Slide[] = [
-  { id: 's1', image: '/images/car/hero.jpg', title: 'THE SF-26 IS BACK ON TRACK', subtitle: 'FOR A FURTHER 174 LAPS' },
-  { id: 's2', image: '/images/car/hero2.jpg', title: 'CHENNAI TURBO RIDERS', subtitle: 'SEASON 4 LINEUP' },
-  { id: 's3', image: '/images/car/hero3.jpg', title: 'NIGHT RACE IN CHENNAI', subtitle: 'STREET CIRCUIT SPECIAL' }
+  { id: 's1', image: '/images/car/hero.jpg', title: 'THE SF-26 IS BACK ON TRACK' },
+  { id: 's2', image: '/images/car/hero2.jpg', title: 'CHENNAI TURBO RIDERS' },
+  { id: 's3', image: '/images/car/hero3.jpg', title: 'NIGHT RACE IN CHENNAI' }
 ];
 
 export default function HeroSlider() {
@@ -45,9 +44,13 @@ export default function HeroSlider() {
         <div key={s.id} className={`hero-slide ${i === index ? 'active' : ''}`} style={{ backgroundImage: `url(${s.image})` }}>
           <div className="hero-slide-overlay">
             <h2 className="hero-slide-title">{s.title}</h2>
-            {s.subtitle && <p className="hero-slide-sub">{s.subtitle}</p>}
             <div className="hero-slide-cta">
-              <Link href="/not-found" className="btn btn-outline">DISCOVER</Link>
+              <Link href="/not-found" className="btn">
+                DISCOVER
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                </svg>
+              </Link>
             </div>
           </div>
         </div>

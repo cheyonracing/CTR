@@ -26,8 +26,8 @@ export default function Navbar({ transparent = true }: NavbarProps) {
         <Image 
           src="/images/logos/CTR_yellow.png" 
           alt="Chennai Turbo Riders" 
-          width={45} 
-          height={45}
+          width={100} 
+          height={100}
         />
       </Link>
 
