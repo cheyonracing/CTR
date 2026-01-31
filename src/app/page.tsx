@@ -105,7 +105,7 @@ export default function Home() {
         <div className="container">
           <div className="calendar-header">
             <p className="section-label">{races.seasonName}</p>
-            <h2 className="spaced-title-large">R A C E &nbsp; C A L E N D A R</h2>
+            <h2 className="spaced-title-large">RACE CALENDER</h2>
           </div>
           
           <div className="race-list">
@@ -191,6 +191,19 @@ export default function Home() {
               <p className="sponsors-tier-title">Title Sponsor</p>
               <div className="sponsors-grid">
                 {sponsors.title.map(sponsor => (
+                  <a key={sponsor.id} href={sponsor.website} target="_blank" rel="noopener noreferrer">
+                    <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+          
+          {sponsors.principal.length > 0 && (
+            <div className="sponsors-tier">
+              <p className="sponsors-tier-title">Principal Partners</p>
+              <div className="sponsors-grid">
+                {sponsors.principal.map(sponsor => (
                   <a key={sponsor.id} href={sponsor.website} target="_blank" rel="noopener noreferrer">
                     <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
                   </a>

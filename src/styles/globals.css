@@ -320,15 +320,15 @@ ul, ol {
 }
 
 .schedule-page-content .race-item {
-  background: rgba(26, 26, 26, 0.75) !important;
+  background: transparent !important;
 }
 
 .schedule-page-content .race-item:hover {
-  background: rgba(42, 42, 42, 0.85) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .schedule-page-content .next-race-info {
-  background: rgba(26, 26, 26, 0.75) !important;
+  background: transparent !important;
 }
 
 .schedule-page-content .race-list {
@@ -342,9 +342,9 @@ ul, ol {
 
 .street-panel {
   padding: 2rem;
-  background: rgba(3, 3, 3, 0.75);
+  background: transparent;
   border-left: 4px solid var(--ctr-yellow);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  box-shadow: none;
 }
 
 .street-panel span {
@@ -1223,12 +1223,17 @@ ul, ol {
 /* Sponsors Section - Ferrari Style */
 .sponsors-section {
   padding: var(--spacing-3xl) 0;
-  background: var(--ctr-black);
+  background: #ffffff;
 }
 
 .sponsors-header {
   text-align: center;
   margin-bottom: var(--spacing-2xl);
+}
+
+.sponsors-section .section-label,
+.sponsors-section .spaced-title-large {
+  color: var(--ctr-black);
 }
 
 .sponsors-tier {
@@ -1240,11 +1245,11 @@ ul, ol {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--ctr-yellow);
+  color: var(--ctr-black);
   text-align: center;
   margin-bottom: var(--spacing-lg);
   padding-bottom: var(--spacing-sm);
-  border-bottom: 1px solid var(--ctr-gray-medium);
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .sponsors-grid {
@@ -1256,23 +1261,21 @@ ul, ol {
 }
 
 .sponsor-logo {
-  height: 50px;
+  height: 100px;
   width: auto;
-  opacity: 0.7;
-  filter: brightness(0) invert(1);
+  opacity: 1;
+  filter: none;
   transition: all 0.4s ease;
   cursor: pointer;
 }
 
 .sponsor-logo:hover {
-  opacity: 1;
-  filter: none;
   transform: scale(1.1);
-  filter: drop-shadow(0 4px 15px rgba(255, 215, 0, 0.3));
+  filter: drop-shadow(0 4px 15px rgba(255, 215, 0, 0.5));
 }
 
 .sponsors-tier.title .sponsor-logo {
-  height: 70px;
+  height: 100px;
 }
 
 /* Footer - Ferrari Style */
@@ -1387,9 +1390,7 @@ ul, ol {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 30%),
-              radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.06) 0%, transparent 28%),
-              linear-gradient(180deg, #050505 0%, #0c0c0c 60%, #050505 100%);
+  background: rgba(0, 0, 0, 0.0);
 }
 
 .driver-hero-bg::after {
@@ -1397,9 +1398,9 @@ ul, ol {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, 
-    rgba(0,0,0,0.35) 0%, 
-    rgba(0,0,0,0.35) 40%, 
-    rgba(0,0,0,0.9) 100%);
+    rgba(0,0,0,0.2) 0%, 
+    rgba(0,0,0,0.2) 40%, 
+    rgba(0,0,0,0.4) 100%);
 }
 
 .driver-hero-content {
@@ -1537,7 +1538,7 @@ ul, ol {
 
 .driver-details-section {
   padding: var(--spacing-3xl) 0;
-  background: var(--ctr-black);
+  background: transparent !important;
 }
 
 .driver-info-grid {
@@ -2104,6 +2105,10 @@ ul, ol {
   padding: 160px var(--spacing-lg) var(--spacing-3xl);
   background: linear-gradient(135deg, var(--ctr-gray-dark) 0%, var(--ctr-black) 100%);
   text-align: center;
+}
+
+.schedule-page .page-hero {
+  background: transparent !important;
 }
 
 .page-hero h1 {

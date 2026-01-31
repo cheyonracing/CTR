@@ -51,12 +51,22 @@ export default async function DriverPage({ params }: DriverPageProps) {
   const pointsPercent = Math.min((driver.stats.points / maxStats.points) * 100, 100);
 
   return (
-    <>
+    <div className="schedule-page">
+      <video
+        className="schedule-page-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/video/background.mp4"
+      >
+        <source src="/video/background.mp4" type="video/mp4" />
+      </video>
       <Navbar />
       
+      <div className="schedule-page-content">
       {/* Driver Hero - Professional Design */}
       <section className="driver-hero">
-        <div className="driver-hero-bg" />
         
         <div className="driver-hero-content">
           <div className="driver-hero-inner">
@@ -339,7 +349,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
       </section>
 
       {/* Back to Team */}
-      <section style={{ padding: '4rem 0', textAlign: 'center', background: 'var(--ctr-dark)' }}>
+      <section style={{ padding: '4rem 0', textAlign: 'center', background: 'transparent' }}>
         <Link href="/team" className="btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ transform: 'rotate(180deg)' }}>
             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
@@ -349,6 +359,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
       </section>
 
       <Footer />
-    </>
+      </div>
+    </div>
   );
 }

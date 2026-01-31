@@ -36,11 +36,29 @@ export default function SchedulePage() {
       
       <div className="schedule-page-content">
         {/* Page Hero */}
-        <section className="page-hero schedule-hero">
-          <p className="section-label">{races.seasonName}</p>
-          <h1 className="spaced-title-large">
-            RACE&nbsp;<span>CALENDAR</span>
-          </h1>
+        <section
+          className="page-hero"
+          style={{
+            position: 'relative',
+            background: 'none',
+            backgroundColor: 'transparent'
+          }}
+        >
+          <div style={{ 
+            position: 'absolute', 
+            top: 0, 
+            left: 0, 
+            right: 0, 
+            bottom: 0, 
+            backgroundColor: 'transparent', 
+            zIndex: 1 
+          }}></div>
+          <div style={{ position: 'relative', zIndex: 2 }}>
+            <p className="section-label">{races.seasonName}</p>
+            <h1 className="spaced-title-large">
+              RACE&nbsp;<span>CALENDAR</span>
+            </h1>
+          </div>
         </section>
 
       {/* Countdown */}
@@ -162,9 +180,9 @@ export default function SchedulePage() {
           </div>
         </div>
       </section>
+      </div>
 
       <Footer />
-      </div>
     </div>
   );
 }
