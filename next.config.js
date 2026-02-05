@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
+  basePath: '/CTR',
+  assetPrefix: '/CTR/',
   images: {
     domains: ['localhost'],
     unoptimized: true,
