@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Official website of Chennai Turbo Riders - Professional Racing Team competing in the Indian Racing League',
   keywords: ['Chennai Turbo Riders', 'CTR', 'Racing', 'IRL', 'Formula 4', 'Motorsport', 'India'],
   icons: {
-    icon: '/images/logos/CTR_yellow.png',
+    icon: '/CTR/images/logos/CTR_yellow.png',
   },
 };
 
