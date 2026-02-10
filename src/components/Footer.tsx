@@ -16,6 +16,7 @@ export default function Footer() {
               width={50}
               height={50}
               className="footer-logo"
+              loading="lazy"
             />
             <p className="footer-description">
               {site.description}. Professional racing team competing in the {site.championship} with Chennai-based and international drivers.

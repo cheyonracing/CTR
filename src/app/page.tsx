@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import DriverCard from '@/components/DriverCard';
 import CountdownTimer from '@/components/CountdownTimer';
 import InstagramFeed from '@/components/InstagramFeed';
 import siteData from '@/data/siteData';
@@ -13,32 +12,23 @@ import { HorizontalScrollCarousel } from '@/components/ui/horizontal-scroll-caro
 export default function Home() {
   const { site, car, drivers, races, news, sponsors } = siteData;
   const nextRace = races.calendar[0];
-  const driverImages = drivers.map(driver => driver.image);
 
-  const formatDate = (dateStr: string) => {
-    return new Date(dateStr).toLocaleDateString('en-US', { 
-      day: '2-digit', 
-      month: 'short' 
-    });
-  };
-
-
+  const formatDate = (dateStr: string) =>
+    new Date(dateStr).toLocaleDateString('en-US', { day: '2-digit', month: 'short' });
 
   return (
     <>
       <Navbar />
-      
-      {/* Hero Slider */}
+
+      {/* ── Hero Slider ── */}
       <div style={{ position: 'relative', zIndex: 1 }}>
-        {/* season label remains above slider */}
-        <div className="hero-season-label" style={{ position: 'absolute', left: '2rem', top: '5rem', zIndex: 2 }}>
-          <p className="section-label">Season {races.season} • {races.seasonName}</p>
+        <div className="hero-season-label">
+          <p className="section-label">Season {races.season} &bull; {races.seasonName}</p>
         </div>
-        {/* slider component */}
         <HeroSlider />
       </div>
 
-      {/* Car Section - Ferrari Style */}
+      {/* ── Car Section ── */}
       <section className="car-section">
         <div className="container">
           <div className="car-showcase">
@@ -48,53 +38,50 @@ export default function Home() {
                 CTR<br /><span>RACING</span>
               </h2>
               <p>
-                Experience the power and precision of Chennai Turbo Riders' racing machine. 
-                Built for speed, engineered for victory on both traditional circuits and 
-                India's first street circuit night race.
+                Experience the power and precision of Chennai Turbo Riders&apos; racing machine.
+                Built for speed, engineered for victory on both traditional circuits and
+                India&apos;s first street circuit night race.
               </p>
-              <Link href="/about" className="btn btn-outline">
-                Learn More
-              </Link>
+              <Link href="/about" className="btn btn-outline">Learn More</Link>
             </div>
             <div className="car-image">
-              <img src={car.image} alt={car.name} />
+              <img src={car.image} alt={car.name} loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Drivers Section - Ferrari Style */}
-      <section className="drivers-section" style={{ padding: 0 }}>
+      {/* ── Drivers ── */}
+      <section className="drivers-section" style={{ paddingBottom: 0 }}>
         <div className="container" style={{ marginBottom: '2rem' }}>
           <div className="drivers-header">
             <p className="section-label">Official Drivers</p>
             <h2 className="spaced-title-large">OUR TEAM</h2>
           </div>
         </div>
-        
-        <HorizontalScrollCarousel 
-          items={drivers.map(driver => ({
-            id: driver.id,
-            image: driver.image,
-            firstName: driver.firstName,
-            lastName: driver.lastName,
-            number: driver.number,
-            flagEmoji: driver.flagEmoji
-          }))} 
+        <HorizontalScrollCarousel
+          items={drivers.map((d) => ({
+            id: d.id,
+            image: d.image,
+            firstName: d.firstName,
+            lastName: d.lastName,
+            number: d.number,
+            flagEmoji: d.flagEmoji,
+          }))}
         />
       </section>
 
-      {/* Countdown Section - Ferrari Style */}
+      {/* ── Countdown ── */}
       <section className="countdown-section">
         <div className="container">
           <p className="countdown-label">Next Race Starts In</p>
           <CountdownTimer targetDate={nextRace.dateStart} />
-          
           <div className="next-race-info">
             <span className="next-race-flag">{nextRace.flagEmoji}</span>
             <div className="next-race-details">
               <p className="next-race-date">
-                {formatDate(nextRace.dateStart)} - {formatDate(nextRace.dateEnd)} {new Date(nextRace.dateEnd).getFullYear()}
+                {formatDate(nextRace.dateStart)} – {formatDate(nextRace.dateEnd)}{' '}
+                {new Date(nextRace.dateEnd).getFullYear()}
               </p>
               <p className="next-race-name">{nextRace.name}</p>
             </div>
@@ -102,17 +89,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Race Calendar Preview - Ferrari Style */}
+      {/* ── Race Calendar Preview ── */}
       <section className="calendar-section">
         <div className="container">
           <div className="calendar-header">
             <p className="section-label">{races.seasonName}</p>
-            <h2 className="spaced-title-large">RACE CALENDER</h2>
+            <h2 className="spaced-title-large">RACE CALENDAR</h2>
           </div>
-          
+
           <div className="race-list">
-            {races.calendar.slice(0, 5).map((race, index) => (
-              <div key={race.round} className={`race-item ${index === 0 ? 'next' : ''}`}>
+            {races.calendar.slice(0, 5).map((race, i) => (
+              <div key={race.round} className={`race-item ${i === 0 ? 'next' : ''}`}>
                 <span className="race-round">Round {String(race.round).padStart(2, '0')}</span>
                 <div className="race-info">
                   <span className="race-flag">{race.flagEmoji}</span>
@@ -128,79 +115,78 @@ export default function Home() {
                   </div>
                 </div>
                 <span className="race-date">
-                  {formatDate(race.dateStart)} - {formatDate(race.dateEnd)}
+                  {formatDate(race.dateStart)} – {formatDate(race.dateEnd)}
                 </span>
               </div>
             ))}
           </div>
-          
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
             <Link href="/schedule" className="btn btn-primary">View Full Calendar</Link>
           </div>
         </div>
       </section>
 
-      {/* News Section - Instagram Feed */}
+      {/* ── News / Instagram ── */}
       <section className="news-section">
         <div className="container">
           <div className="news-header">
             <div>
               <p className="section-label">Latest Updates</p>
-              <h2 className="spaced-title resp-section-title">N E W S</h2>
+              <h2 className="spaced-title resp-section-title">NEWS</h2>
             </div>
             <Link href="/news" className="view-all-link">
               View All Posts
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
               </svg>
             </Link>
           </div>
-          
           <InstagramFeed username="chennaiturboriders" limit={3} />
         </div>
       </section>
 
-      {/* Sponsors Section - Ferrari Style */}
+      {/* ── Sponsors ── */}
       <section className="sponsors-section">
         <div className="container">
           <div className="sponsors-header">
             <p className="section-label">Our Partners</p>
             <h2 className="spaced-title-large">SPONSORS</h2>
           </div>
-          
+
           {sponsors.title.length > 0 && (
             <div className="sponsors-tier title">
               <p className="sponsors-tier-title">Title Sponsor</p>
               <div className="sponsors-grid">
-                {sponsors.title.map(sponsor => (
-                  <a key={sponsor.id} href={sponsor.website} target="_blank" rel="noopener noreferrer">
-                    <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
+                {sponsors.title.map((s) => (
+                  <a key={s.id} href={s.website} target="_blank" rel="noopener noreferrer">
+                    <img src={s.logo} alt={s.name} className="sponsor-logo" loading="lazy" />
                   </a>
                 ))}
               </div>
             </div>
           )}
-          
+
           {sponsors.principal.length > 0 && (
             <div className="sponsors-tier">
               <p className="sponsors-tier-title">Principal Partners</p>
               <div className="sponsors-grid">
-                {sponsors.principal.map(sponsor => (
-                  <a key={sponsor.id} href={sponsor.website} target="_blank" rel="noopener noreferrer">
-                    <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
+                {sponsors.principal.map((s) => (
+                  <a key={s.id} href={s.website} target="_blank" rel="noopener noreferrer">
+                    <img src={s.logo} alt={s.name} className="sponsor-logo" loading="lazy" />
                   </a>
                 ))}
               </div>
             </div>
           )}
-          
+
           {sponsors.official.length > 0 && (
             <div className="sponsors-tier">
               <p className="sponsors-tier-title">Official Partners</p>
               <div className="sponsors-grid">
-                {sponsors.official.map(sponsor => (
-                  <a key={sponsor.id} href={sponsor.website} target="_blank" rel="noopener noreferrer">
-                    <img src={sponsor.logo} alt={sponsor.name} className="sponsor-logo" />
+                {sponsors.official.map((s) => (
+                  <a key={s.id} href={s.website} target="_blank" rel="noopener noreferrer">
+                    <img src={s.logo} alt={s.name} className="sponsor-logo" loading="lazy" />
                   </a>
                 ))}
               </div>

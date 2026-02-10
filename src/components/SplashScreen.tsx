@@ -8,28 +8,46 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ children }: SplashScreenProps) {
   const [showSplash, setShowSplash] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 1000); // Show for 1 second
-
-    return () => clearTimeout(timer);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 1200);
+    const hideTimer = setTimeout(() => setShowSplash(false), 1800);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
-  if (showSplash) {
-    return (
-      <div className="loading-screen">
-        <div className="loading-content">
-          <img
-            src="/images/logos/CTR_yellow.png"
-            alt="CTR Logo"
-            className="loading-logo"
-          />
+  return (
+    <>
+      {showSplash && (
+        <div
+          className="loading-screen"
+          style={{
+            opacity: fadeOut ? 0 : 1,
+            transition: 'opacity 0.6s ease',
+            pointerEvents: fadeOut ? 'none' : 'auto',
+          }}
+        >
+          <div className="loading-content">
+            <img
+              src="/images/logos/CTR_yellow.png"
+              alt="CTR Logo"
+              className="loading-logo"
+            />
+            <div className="loading-spinner" />
+          </div>
         </div>
+      )}
+      <div
+        style={{
+          opacity: fadeOut ? 1 : 0,
+          transition: 'opacity 0.6s ease',
+        }}
+      >
+        {children}
       </div>
-    );
-  }
-
-  return <>{children}</>;
+    </>
+  );
 }

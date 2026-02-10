@@ -13,6 +13,7 @@ export default function DriverCard({ driver }: DriverCardProps) {
           <img
             src={driver.image}
             alt={`${driver.firstName} ${driver.lastName}`}
+            loading="lazy"
           />
         ) : (
           <div className="placeholder-img">

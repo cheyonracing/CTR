@@ -11,17 +11,15 @@ export default function NewsPage() {
   return (
     <>
       <Navbar />
-      
+
       {/* Page Hero */}
       <section className="page-hero">
         <p className="section-label">Latest Updates</p>
-        <h1 className="spaced-title-large">
-          LATEST NEWS
-        </h1>
+        <h1 className="spaced-title-large">LATEST NEWS</h1>
       </section>
 
       {/* Instagram Feed Section */}
-      <section style={{ padding: '6rem 0', background: 'var(--ctr-black)' }}>
+      <section style={{ padding: 'clamp(2rem, 6vw, 6rem) 0', background: 'var(--ctr-black)' }}>
         <div className="container">
           <InstagramFeed username="chennaiturboriders" limit={9} />
         </div>
