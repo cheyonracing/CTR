@@ -74,66 +74,49 @@ export default function SchedulePage() {
           </div>
         </section>
 
-        {/* Full Calendar */}
+        {/* Full Calendar — Card Grid */}
         <section className="calendar-section" style={{ paddingTop: 'clamp(1rem, 3vw, 2rem)' }}>
           <div className="container">
-            <div className="race-list">
+            <div className="race-card-grid">
               {races.calendar.map((race, index) => (
                 <div
                   key={race.round}
-                  className={`race-item ${index === 0 ? 'next' : ''}`}
+                  className={`race-card ${index === 0 ? 'next-race' : ''}`}
                 >
-                  <span className="race-round">
-                    Round {String(race.round).padStart(2, '0')}
-                  </span>
-                  <div className="race-info">
-                    <span className="race-flag">{race.flagEmoji}</span>
-                    <div className="race-details">
-                      <h4>{race.name}</h4>
-                      <p
-                        className="race-location"
-                        aria-label={`${race.location}, ${race.country}`}
-                      >
-                        <span className="race-location-flag" aria-hidden="true">
-                          {race.flagEmoji}
-                        </span>
-                        <span>{race.location}</span>
-                      </p>
-                      <p
-                        style={{
-                          fontSize: 'clamp(0.7rem, 0.9vw, 0.8rem)',
-                          color: 'var(--ctr-text-gray)',
-                          marginTop: '0.25rem',
-                        }}
-                      >
-                        Circuit: {race.circuitLength} &bull; {race.laps} Laps
-                      </p>
-                      {(race.isNightRace || race.isStreetCircuit) && (
-                        <div className="race-badges">
-                          {race.isNightRace && (
-                            <span className="race-badge">Night Race</span>
-                          )}
-                          {race.isStreetCircuit && (
-                            <span className="race-badge">Street Circuit</span>
-                          )}
-                        </div>
+                  <div className="race-card-round-number">
+                    {String(race.round).padStart(2, '0')}
+                  </div>
+                  <div className="race-card-body">
+                    <p className="race-card-name">{race.name}</p>
+                    <p className="race-card-location">
+                      <span>{race.flagEmoji}</span> {race.location}, {race.country}
+                    </p>
+                    <p className="race-card-circuit">
+                      {race.circuitLength} &bull; {race.laps} Laps
+                    </p>
+                    <div className="race-card-meta">
+                      <span className="race-card-date">
+                        {formatDate(race.dateStart)} –{' '}
+                        {formatDate(race.dateEnd)}{' '}
+                        {new Date(race.dateEnd).getFullYear()}
+                      </span>
+                      {race.isNightRace && (
+                        <span className="race-card-tag">Night Race</span>
+                      )}
+                      {race.isStreetCircuit && (
+                        <span className="race-card-tag">Street Circuit</span>
                       )}
                     </div>
                   </div>
-                  <span className="race-date">
-                    {formatDate(race.dateStart)} -{' '}
-                    {formatDate(race.dateEnd)}{' '}
-                    {new Date(race.dateEnd).getFullYear()}
-                  </span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Street Circuit Info */}
+        {/* Street Circuit Info — Side-by-side layout */}
         <section className="street-section">
-          <div className="container" style={{ maxWidth: '900px' }}>
+          <div className="container" style={{ maxWidth: '1100px' }}>
             <p className="section-label" style={{ textAlign: 'center' }}>
               Special Event
             </p>
@@ -142,92 +125,93 @@ export default function SchedulePage() {
               style={{
                 textAlign: 'center',
                 fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
-                marginBottom: 'clamp(1rem, 3vw, 2rem)',
+                marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)',
               }}
             >
               {races.streetCircuit.name.toUpperCase()}
             </h2>
-            <div className="street-panel">
+
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(380px, 100%), 1fr))',
+              gap: 'clamp(1rem, 2vw, 2rem)',
+              alignItems: 'start',
+            }}>
+              {/* Left — Circuit Image */}
               {races.streetCircuit.image && (
-                <div style={{ marginBottom: 'clamp(1rem, 2vw, 2rem)' }}>
+                <div className="street-panel" style={{ padding: 0, overflow: 'hidden' }}>
                   <img
                     src={races.streetCircuit.image}
                     alt={`${races.streetCircuit.name} map`}
                     loading="lazy"
                     style={{
                       width: '100%',
-                      height: 'auto',
+                      height: 'clamp(250px, 30vw, 400px)',
                       objectFit: 'cover',
-                      borderRadius: '8px',
+                      display: 'block',
                     }}
                   />
                 </div>
               )}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(120px, 100%), 1fr))',
-                  gap: 'clamp(1rem, 2vw, 2rem)',
-                  marginBottom: 'clamp(1rem, 2vw, 2rem)',
-                }}
-              >
-                <div style={{ textAlign: 'center' }}>
-                  <p
-                    className="resp-stat-number"
-                    style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)' }}
-                  >
-                    {races.streetCircuit.length}
-                  </p>
-                  <p className="resp-stat-label">Circuit Length</p>
-                </div>
-                <div style={{ textAlign: 'center' }}>
-                  <p
-                    className="resp-stat-number"
-                    style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)' }}
-                  >
-                    {races.streetCircuit.capacity.toLocaleString()}
-                  </p>
-                  <p className="resp-stat-label">Capacity</p>
-                </div>
-                <div style={{ textAlign: 'center' }}>
-                  <p
-                    className="resp-stat-number"
-                    style={{ fontSize: 'clamp(1.2rem, 3vw, 2.5rem)' }}
-                  >
-                    {races.streetCircuit.stands}
-                  </p>
-                  <p className="resp-stat-label">Grandstands</p>
-                </div>
-              </div>
 
-              <h4
-                style={{
-                  marginBottom: '0.75rem',
-                  fontSize: 'clamp(0.75rem, 1vw, 0.9rem)',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                Circuit Route
-              </h4>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                {races.streetCircuit.route.map((point, index) => (
-                  <span
-                    key={index}
-                    style={{
-                      padding: '0.4rem 0.75rem',
-                      background: 'var(--ctr-gray-medium)',
-                      fontSize: 'clamp(0.72rem, 0.9vw, 0.85rem)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.4rem',
-                    }}
-                  >
-                    {point}
-                    {index < races.streetCircuit.route.length - 1 && (
-                      <span style={{ color: 'var(--ctr-yellow)' }}>&rarr;</span>
-                    )}
-                  </span>
-                ))}
+              {/* Right — Stats & Route */}
+              <div className="street-panel">
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: 'clamp(0.75rem, 1.5vw, 1.5rem)',
+                  marginBottom: 'clamp(1.25rem, 2vw, 2rem)',
+                }}>
+                  {[
+                    { value: races.streetCircuit.length, label: 'Length' },
+                    { value: races.streetCircuit.capacity.toLocaleString(), label: 'Capacity' },
+                    { value: races.streetCircuit.stands, label: 'Stands' },
+                  ].map((stat) => (
+                    <div key={stat.label} style={{ textAlign: 'center' }}>
+                      <p
+                        className="resp-stat-number"
+                        style={{ fontSize: 'clamp(1.2rem, 2.5vw, 2rem)' }}
+                      >
+                        {stat.value}
+                      </p>
+                      <p className="resp-stat-label">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <h4
+                  style={{
+                    marginBottom: '0.75rem',
+                    fontSize: 'clamp(0.72rem, 0.9vw, 0.82rem)',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: 'var(--ctr-yellow)',
+                  }}
+                >
+                  Circuit Route
+                </h4>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  {races.streetCircuit.route.map((point, index) => (
+                    <span
+                      key={index}
+                      style={{
+                        padding: '0.35rem 0.65rem',
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        borderRadius: '4px',
+                        fontSize: 'clamp(0.7rem, 0.85vw, 0.8rem)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        color: 'var(--ctr-white)',
+                      }}
+                    >
+                      {point}
+                      {index < races.streetCircuit.route.length - 1 && (
+                        <span style={{ color: 'var(--ctr-yellow)' }}>&rarr;</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

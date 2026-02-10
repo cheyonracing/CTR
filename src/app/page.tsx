@@ -26,30 +26,42 @@ export default function Home() {
           <p className="section-label">Season {races.season} &bull; {races.seasonName}</p>
         </div>
         <HeroSlider />
-      </div>
-
-      {/* ── Car Section ── */}
-      <section className="car-section">
-        <div className="container">
-          <div className="car-showcase">
-            <div className="car-info">
-              <p className="section-label">{car.year} Season Car</p>
-              <h2 className="spaced-title-large">
-                CTR<br /><span>RACING</span>
-              </h2>
-              <p>
-                Experience the power and precision of Chennai Turbo Riders&apos; racing machine.
-                Built for speed, engineered for victory on both traditional circuits and
-                India&apos;s first street circuit night race.
-              </p>
-              <Link href="/about" className="btn btn-outline">Learn More</Link>
-            </div>
-            <div className="car-image">
-              <img src={car.image} alt={car.name} loading="lazy" />
-            </div>
+        {/* Quick stats overlaid on hero (desktop only) */}
+        <div className="hero-stats-strip">
+          <div className="hero-stat-item">
+            <span className="hero-stat-value">{drivers.length}</span>
+            <span className="hero-stat-label">Drivers</span>
+          </div>
+          <div className="hero-stat-item">
+            <span className="hero-stat-value">{races.calendar.length}</span>
+            <span className="hero-stat-label">Races</span>
+          </div>
+          <div className="hero-stat-item">
+            <span className="hero-stat-value">S{races.season}</span>
+            <span className="hero-stat-label">Season</span>
           </div>
         </div>
+      </div>
+
+      {/* ── Car Section — Cinematic Full-Bleed ── */}
+      <section className="car-cinematic">
+        <div className="car-cinematic-bg" style={{ backgroundImage: `url(${car.image})` }} />
+        <div className="car-cinematic-gradient" />
+        <div className="car-cinematic-content">
+          <p className="section-label">{car.year} Season Car</p>
+          <h2 className="spaced-title-large">
+            CTR<br /><span>RACING</span>
+          </h2>
+          <p>
+            Experience the power and precision of Chennai Turbo Riders&apos; racing machine.
+            Built for speed, engineered for victory on both traditional circuits and
+            India&apos;s first street circuit night race.
+          </p>
+          <Link href="/about" className="btn btn-outline">Learn More</Link>
+        </div>
       </section>
+
+      <div className="section-divider-diagonal" />
 
       {/* ── Drivers ── */}
       <section className="drivers-section" style={{ paddingBottom: 0 }}>
@@ -89,7 +101,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Race Calendar Preview ── */}
+      <div className="section-divider-diagonal--reverse" />
+
+      {/* ── Race Calendar Preview — Card Grid ── */}
       <section className="calendar-section">
         <div className="container">
           <div className="calendar-header">
@@ -97,26 +111,25 @@ export default function Home() {
             <h2 className="spaced-title-large">RACE CALENDAR</h2>
           </div>
 
-          <div className="race-list">
-            {races.calendar.slice(0, 5).map((race, i) => (
-              <div key={race.round} className={`race-item ${i === 0 ? 'next' : ''}`}>
-                <span className="race-round">Round {String(race.round).padStart(2, '0')}</span>
-                <div className="race-info">
-                  <span className="race-flag">{race.flagEmoji}</span>
-                  <div className="race-details">
-                    <h4>{race.name}</h4>
-                    <p className="race-location">{race.location}, {race.country}</p>
-                    {(race.isNightRace || race.isStreetCircuit) && (
-                      <div className="race-badges">
-                        {race.isNightRace && <span className="race-badge">Night Race</span>}
-                        {race.isStreetCircuit && <span className="race-badge">Street</span>}
-                      </div>
-                    )}
+          <div className="race-card-grid">
+            {races.calendar.slice(0, 6).map((race, i) => (
+              <div key={race.round} className={`race-card ${i === 0 ? 'next-race' : ''}`}>
+                <div className="race-card-round-number">
+                  {String(race.round).padStart(2, '0')}
+                </div>
+                <div className="race-card-body">
+                  <p className="race-card-name">{race.name}</p>
+                  <p className="race-card-location">
+                    <span>{race.flagEmoji}</span> {race.location}, {race.country}
+                  </p>
+                  <div className="race-card-meta">
+                    <span className="race-card-date">
+                      {formatDate(race.dateStart)} – {formatDate(race.dateEnd)}
+                    </span>
+                    {race.isNightRace && <span className="race-card-tag">Night</span>}
+                    {race.isStreetCircuit && <span className="race-card-tag">Street</span>}
                   </div>
                 </div>
-                <span className="race-date">
-                  {formatDate(race.dateStart)} – {formatDate(race.dateEnd)}
-                </span>
               </div>
             ))}
           </div>
