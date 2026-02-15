@@ -29,7 +29,7 @@ export default function SponsorsPage() {
           <span className="label-text">Our Partners</span>
           <h1 className="heading-xl mt-3">
             <span className="text-white">SPON</span>
-            <span className="text-racing-red">SORS</span>
+            <span className="text-racing-yellow">SORS</span>
           </h1>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function SponsorsPage() {
           <div className="section-container">
             <div className="text-center mb-12">
               <span className="label-text">{tier.label}</span>
-              <div className="w-12 h-[1px] bg-racing-red/30 mx-auto mt-3" />
+              <div className="w-12 h-[1px] bg-racing-yellow/30 mx-auto mt-3" />
             </div>
 
             {tier.key === "title" ? (
@@ -91,7 +91,7 @@ export default function SponsorsPage() {
                     href={s.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group carbon-card p-6 flex flex-col items-center text-center hover:border-racing-red/30 transition-all duration-300"
+                    className="group carbon-card p-6 flex flex-col items-center text-center hover:border-racing-yellow/30 transition-all duration-300"
                   >
                     <div className="h-24 flex items-center justify-center mb-4">
                       <img

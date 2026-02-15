@@ -54,7 +54,7 @@ export default function Navbar() {
               <span className="font-heading font-bold text-lg tracking-wider text-white">
                 {siteData.site.abbreviation}
               </span>
-              <span className="block text-[10px] uppercase tracking-[0.3em] text-carbon-400 font-heading">
+              <span className="block text-[10px] uppercase tracking-[0.3em] text-carbon-400 font-body font-medium">
                 Racing Team
               </span>
             </div>
@@ -70,7 +70,7 @@ export default function Navbar() {
                 hover:text-white transition-colors duration-300 group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-racing-red transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-racing-yellow transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
@@ -113,7 +113,7 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-carbon-950/98 backdrop-blur-xl flex flex-col items-center justify-center"
           >
             {/* Decorative red line */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-racing-red to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-racing-yellow to-transparent" />
 
             <nav className="flex flex-col items-center gap-1">
               {navLinks.map((link, i) => (
@@ -127,7 +127,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className="block px-8 py-3 font-heading font-bold text-2xl uppercase tracking-widest text-white 
-                    hover:text-racing-red transition-colors duration-300"
+                    hover:text-racing-yellow transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-carbon-400 hover:text-racing-red transition-colors duration-300 text-sm font-heading uppercase tracking-wider"
+                  className="text-carbon-400 hover:text-racing-yellow transition-colors duration-300 text-sm font-heading uppercase tracking-wider"
                 >
                   {platform}
                 </a>

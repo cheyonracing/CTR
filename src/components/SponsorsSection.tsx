@@ -28,7 +28,7 @@ export default function SponsorsSection() {
           </div>
           <h2 className="heading-lg">
             <span className="text-white">OUR </span>
-            <span className="text-racing-red">PARTNERS</span>
+            <span className="text-racing-yellow">PARTNERS</span>
           </h2>
         </AnimatedSection>
 
@@ -37,10 +37,10 @@ export default function SponsorsSection() {
           {tiers.map((tier, tierIdx) => (
             <AnimatedSection key={tier.key} delay={tierIdx * 0.1}>
               <div className="text-center mb-8">
-                <span className="font-heading font-semibold text-xs uppercase tracking-[0.3em] text-carbon-400">
+                <span className=" font-body font-medium text-xs uppercase tracking-[0.3em] text-carbon-400">
                   {tier.label}
                 </span>
-                <div className="w-12 h-[1px] bg-racing-red/30 mx-auto mt-3" />
+                <div className="w-12 h-[1px] bg-racing-yellow/30 mx-auto mt-3" />
               </div>
 
               <div
@@ -59,7 +59,7 @@ export default function SponsorsSection() {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
                     className={`group flex items-center justify-center p-6 carbon-card transition-all duration-300
-                    hover:border-racing-red/30 hover:glow-red ${
+                    hover:border-racing-yellow/30 hover:glow-red ${
                       tier.key === "title"
                         ? "w-64 h-32 md:w-80 md:h-40"
                         : "w-40 h-24 md:w-52 md:h-32"

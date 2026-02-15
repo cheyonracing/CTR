@@ -35,14 +35,14 @@ export default function Home() {
 
         {/* Red accent divider */}
         <div className="relative py-1">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-racing-red/40 to-transparent" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-racing-yellow/40 to-transparent" />
         </div>
 
         <NewsCarousel />
 
         {/* Red accent divider */}
         <div className="relative py-1">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-racing-red/40 to-transparent" />
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-racing-yellow/40 to-transparent" />
         </div>
 
         <DriversShowcase />

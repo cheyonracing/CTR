@@ -30,7 +30,7 @@ export default function NewsPage() {
           <span className="label-text">Latest Updates</span>
           <h1 className="heading-xl mt-3">
             <span className="text-white">LATEST </span>
-            <span className="text-racing-red">NEWS</span>
+            <span className="text-racing-yellow">NEWS</span>
           </h1>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function NewsPage() {
               <Link
                 key={article.id}
                 href={`/news/${article.slug}`}
-                className="group carbon-card overflow-hidden hover:border-racing-red/30 transition-all duration-300"
+                className="group carbon-card overflow-hidden hover:border-racing-yellow/30 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -53,18 +53,18 @@ export default function NewsPage() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-carbon-900 to-transparent" />
-                  <span className="absolute bottom-3 right-3 px-3 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-red text-carbon-950">
+                  <span className="absolute bottom-3 right-3 px-3 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-yellow text-carbon-950">
                     {article.category}
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-heading font-bold text-lg text-white group-hover:text-racing-red transition-colors mb-2 line-clamp-2">
+                  <h3 className="font-heading font-bold text-lg text-white group-hover:text-racing-yellow transition-colors mb-2 line-clamp-2">
                     {article.title}
                   </h3>
                   <p className="text-sm text-carbon-400 mb-3 line-clamp-2">{article.excerpt}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-carbon-500">{formatDate(article.publishDate)}</span>
-                    <span className="text-xs text-racing-red font-heading uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-xs text-carbon-500 font-body font-medium">{formatDate(article.publishDate)}</span>
+                    <span className="text-xs text-racing-yellow font-heading uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
                       Read More →
                     </span>
                   </div>

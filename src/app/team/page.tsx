@@ -32,7 +32,7 @@ export default function TeamPage() {
           <span className="label-text">Season {site.currentSeason}</span>
           <h1 className="heading-xl mt-3">
             <span className="text-white">OUR </span>
-            <span className="text-racing-red">TEAM</span>
+            <span className="text-racing-yellow">TEAM</span>
           </h1>
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function TeamPage() {
                   Leading Chennai Turbo Riders with vision and passion, {teamPrincipal.name} has been
                   instrumental in establishing the team as a competitive force in the Indian Racing League.
                 </p>
-                <blockquote className="pl-4 border-l-2 border-racing-red italic text-carbon-300 text-sm">
+                <blockquote className="pl-4 border-l-2 border-racing-yellow italic text-carbon-300 text-sm">
                   &ldquo;Racing is in our DNA. CTR represents the future of Indian motorsport.&rdquo;
                 </blockquote>
               </div>
@@ -80,7 +80,7 @@ export default function TeamPage() {
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <span className="block font-heading font-bold text-4xl md:text-5xl text-white">{stat.val}</span>
-                <span className="block mt-2 text-xs uppercase tracking-[0.25em] text-carbon-400 font-heading">{stat.label}</span>
+                <span className="block mt-2 text-xs uppercase tracking-[0.25em] text-carbon-400 font-body font-medium">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -96,14 +96,14 @@ export default function TeamPage() {
         <div className="relative z-10 section-container">
           <AnimatedSection className="mb-12">
             <div className="flex items-center gap-3 mb-3">
-              <span className="w-3 h-3 rounded-full bg-racing-red animate-pulse" />
-              <span className="text-xs uppercase tracking-[0.2em] text-carbon-400 font-heading">
-                2025 Indian Racing League · Wolf GB08
+              <span className="w-3 h-3 rounded-full bg-racing-yellow animate-pulse" />
+              <span className="text-xs uppercase tracking-[0.2em] text-carbon-400 font-body font-medium">
+                2025 Indian Racing League · IRL Drivers
               </span>
             </div>
             <h2 className="heading-lg">
               <span className="text-white">IRL </span>
-              <span className="text-racing-red">DRIVERS</span>
+              <span className="text-racing-yellow">DRIVERS</span>
             </h2>
           </AnimatedSection>
 
@@ -128,7 +128,7 @@ export default function TeamPage() {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-carbon-900 via-transparent to-transparent" />
-                    <div className="absolute top-0 left-0 w-full h-[2px] bg-racing-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                    <div className="absolute top-0 left-0 w-full h-[2px] bg-racing-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                     <span className="absolute top-4 right-4 font-heading font-bold text-6xl text-white/5">
                       {String(driver.number).padStart(2, "0")}
                     </span>
@@ -136,15 +136,15 @@ export default function TeamPage() {
                   <div className="p-5">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className="text-xs uppercase tracking-wider text-carbon-400 font-heading mb-1">
+                        <p className="text-xs uppercase tracking-wider text-carbon-400 font-body font-medium mb-1">
                           {driver.flagEmoji} {driver.nationality}
                         </p>
-                        <p className="font-heading font-bold text-xl text-white group-hover:text-racing-red transition-colors">
+                        <p className="font-heading font-bold text-xl text-white group-hover:text-racing-yellow transition-colors">
                           {driver.firstName}<br />
                           <span className="text-2xl">{driver.lastName.toUpperCase()}</span>
                         </p>
                       </div>
-                      <span className="font-heading font-bold text-3xl text-racing-red/30">
+                      <span className="font-heading font-bold text-3xl text-racing-yellow/30">
                         {driver.number}
                       </span>
                     </div>
@@ -161,14 +161,14 @@ export default function TeamPage() {
         <div className="relative z-10 section-container">
           <AnimatedSection className="mb-12">
             <div className="flex items-center gap-3 mb-3">
-              <span className="w-3 h-3 rounded-full bg-racing-red animate-pulse" />
-              <span className="text-xs uppercase tracking-[0.2em] text-carbon-400 font-heading">
+              <span className="w-3 h-3 rounded-full bg-racing-yellow animate-pulse" />
+              <span className="text-xs uppercase tracking-[0.2em] text-carbon-400 font-body font-medium">
                 2025 Indian F4 Championship
               </span>
             </div>
             <h2 className="heading-lg">
               <span className="text-white">F4 </span>
-              <span className="text-racing-red">DRIVERS</span>
+              <span className="text-racing-yellow">DRIVERS</span>
             </h2>
           </AnimatedSection>
 
@@ -193,20 +193,20 @@ export default function TeamPage() {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-carbon-800 via-transparent to-transparent" />
-                    <div className="absolute top-0 left-0 w-full h-[2px] bg-racing-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                    <div className="absolute top-0 left-0 w-full h-[2px] bg-racing-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                   </div>
                   <div className="p-5">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className="text-xs uppercase tracking-wider text-carbon-400 font-heading mb-1">
+                        <p className="text-xs uppercase tracking-wider text-carbon-400 font-body font-medium mb-1">
                           {driver.flagEmoji} {driver.nationality}
                         </p>
-                        <p className="font-heading font-bold text-xl text-white group-hover:text-racing-red transition-colors">
+                        <p className="font-heading font-bold text-xl text-white group-hover:text-racing-yellow transition-colors">
                           {driver.firstName}<br />
                           <span className="text-2xl">{driver.lastName.toUpperCase()}</span>
                         </p>
                       </div>
-                      <span className="font-heading font-bold text-3xl text-racing-red/30">
+                      <span className="font-heading font-bold text-3xl text-racing-yellow/30">
                         {driver.number}
                       </span>
                     </div>

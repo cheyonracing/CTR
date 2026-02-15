@@ -46,7 +46,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-[2] bg-gradient-to-r from-carbon-950/60 via-transparent to-transparent" />
 
       {/* Red accent line at top */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-racing-red to-transparent z-10" />
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-racing-yellow to-transparent z-10" />
 
       {/* Content */}
       <motion.div
@@ -61,7 +61,7 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="flex items-center gap-4 mb-6"
           >
-            <div className="w-12 h-[2px] bg-racing-red" />
+            <div className="w-12 h-[2px] bg-racing-yellow" />
             <span className="label-text">{hero.description}</span>
           </motion.div>
 
@@ -74,7 +74,7 @@ export default function Hero() {
           >
             <span className="text-white">{site.abbreviation}</span>
             <br />
-            <span className="text-racing-red">RACING</span>
+            <span className="text-racing-yellow">RACING</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -120,7 +120,7 @@ export default function Hero() {
               {hero.stats.map((stat, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="font-heading font-bold text-2xl text-white">{stat.value}</span>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-carbon-400 font-heading">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-carbon-400  font-body font-medium">
                     {stat.label}
                   </span>
                 </div>
@@ -137,7 +137,7 @@ export default function Hero() {
                 transition={{ duration: 1.5, repeat: Infinity }}
                 className="w-5 h-8 border border-carbon-500 rounded-full flex justify-center pt-1.5"
               >
-                <div className="w-1 h-2 bg-racing-red rounded-full" />
+                <div className="w-1 h-2 bg-racing-yellow rounded-full" />
               </motion.div>
             </div>
           </div>

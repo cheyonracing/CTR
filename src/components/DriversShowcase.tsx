@@ -11,7 +11,7 @@ export default function DriversShowcase() {
   return (
     <section id="drivers" className="relative section-padding overflow-hidden">
       {/* Background decorations */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-racing-red/5 to-transparent z-0" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-racing-yellow/5 to-transparent z-0" />
 
       <div className="relative z-10 section-container">
         {/* Header */}
@@ -23,7 +23,7 @@ export default function DriversShowcase() {
             </div>
             <h2 className="heading-lg">
               <span className="text-white">OUR </span>
-              <span className="text-racing-red">DRIVERS</span>
+              <span className="text-racing-yellow">DRIVERS</span>
             </h2>
           </AnimatedSection>
 
@@ -69,7 +69,7 @@ export default function DriversShowcase() {
                   <div className="absolute inset-0 bg-gradient-to-t from-carbon-900 via-carbon-900/30 to-transparent" />
 
                   {/* Red line on hover */}
-                  <div className="absolute top-0 left-0 w-full h-[2px] bg-racing-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  <div className="absolute top-0 left-0 w-full h-[2px] bg-racing-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 </div>
 
                 {/* Info */}
@@ -79,20 +79,20 @@ export default function DriversShowcase() {
                       <p className="text-xs uppercase tracking-[0.15em] text-carbon-400 font-heading mb-1">
                         {driver.flagEmoji} {driver.nationality}
                       </p>
-                      <p className="font-heading font-bold text-xl text-white tracking-wide group-hover:text-racing-red transition-colors duration-300">
+                      <p className="font-heading font-bold text-xl text-white tracking-wide group-hover:text-racing-yellow transition-colors duration-300">
                         {driver.firstName}
                         <br />
                         <span className="text-2xl">{driver.lastName.toUpperCase()}</span>
                       </p>
                     </div>
-                    <span className="font-heading font-bold text-3xl text-racing-red/30 group-hover:text-racing-red/60 transition-colors duration-300">
+                    <span className="font-heading font-bold text-3xl text-racing-yellow/30 group-hover:text-racing-yellow/60 transition-colors duration-300">
                       {driver.number}
                     </span>
                   </div>
 
                   {/* Championship badge */}
                   {driver.championship && (
-                    <span className="inline-block mt-2 px-3 py-1 text-[10px] uppercase tracking-wider font-heading 
+                    <span className="inline-block mt-2 px-3 py-1 text-[10px] uppercase tracking-wider font-body font-medium 
                     bg-carbon-800 border border-carbon-600/30 text-carbon-300">
                       {driver.championship}
                     </span>
@@ -101,7 +101,7 @@ export default function DriversShowcase() {
                   {/* Arrow */}
                   <div className="absolute bottom-5 right-5 w-8 h-8 flex items-center justify-center 
                   opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                    <svg className="w-5 h-5 text-racing-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-racing-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </div>

@@ -26,7 +26,7 @@ export default function About() {
             <AnimatedSection delay={0.1}>
               <h2 className="heading-lg mb-8">
                 <span className="text-white">ABOUT </span>
-                <span className="text-racing-red">CTR</span>
+                <span className="text-racing-yellow">CTR</span>
               </h2>
             </AnimatedSection>
 
@@ -41,7 +41,7 @@ export default function About() {
             {/* Team Principal */}
             <AnimatedSection delay={0.4}>
               <div className="flex items-center gap-5 p-5 carbon-card">
-                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-racing-red/50 flex-shrink-0">
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-racing-yellow/50 flex-shrink-0">
                   <img
                     src={teamPrincipal.image}
                     alt={teamPrincipal.name}
@@ -52,7 +52,7 @@ export default function About() {
                   <p className="font-heading font-bold text-white text-lg tracking-wide">
                     {teamPrincipal.name}
                   </p>
-                  <p className="text-xs uppercase tracking-[0.2em] text-racing-red font-heading">
+                  <p className="text-xs uppercase tracking-[0.2em] text-racing-yellow font-heading">
                     {teamPrincipal.title}
                   </p>
                 </div>
@@ -64,7 +64,7 @@ export default function About() {
           <AnimatedSection direction="right" delay={0.2}>
             <div className="relative">
               {/* Red accent border */}
-              <div className="absolute -top-3 -right-3 w-full h-full border-2 border-racing-red/20 z-0" />
+              <div className="absolute -top-3 -right-3 w-full h-full border-2 border-racing-yellow/20 z-0" />
               <div className="relative z-10 overflow-hidden inline-block">
                 <img
                   src={about.image}

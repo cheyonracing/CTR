@@ -20,7 +20,7 @@ export default function Contact() {
       <div className="absolute inset-0 bg-carbon-fiber opacity-20" />
 
       {/* Red accent line top */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-racing-red/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-racing-yellow/50 to-transparent" />
 
       <div className="relative z-10 section-container">
         {/* Header */}
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
           <h2 className="heading-lg">
             <span className="text-white">CONTACT </span>
-            <span className="text-racing-red">US</span>
+            <span className="text-racing-yellow">US</span>
           </h2>
         </AnimatedSection>
 
@@ -42,14 +42,14 @@ export default function Contact() {
             <div className="space-y-8">
               {/* Email */}
               <div className="flex items-start gap-5">
-                <div className="w-12 h-12 flex items-center justify-center border border-carbon-600/30 text-racing-red flex-shrink-0">
+                <div className="w-12 h-12 flex items-center justify-center border border-carbon-600/30 text-racing-yellow flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading block mb-1">Email</span>
-                  <a href={`mailto:${contact.email}`} className="text-white hover:text-racing-red transition-colors font-medium">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium block mb-1">Email</span>
+                  <a href={`mailto:${contact.email}`} className="text-white hover:text-racing-yellow transition-colors font-medium">
                     {contact.email}
                   </a>
                 </div>
@@ -57,34 +57,34 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="flex items-start gap-5">
-                <div className="w-12 h-12 flex items-center justify-center border border-carbon-600/30 text-racing-red flex-shrink-0">
+                <div className="w-12 h-12 flex items-center justify-center border border-carbon-600/30 text-racing-yellow flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading block mb-1">Phone</span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium block mb-1">Phone</span>
                   <span className="text-white font-medium">{contact.phone}</span>
                 </div>
               </div>
 
               {/* Address */}
               <div className="flex items-start gap-5">
-                <div className="w-12 h-12 flex items-center justify-center border border-carbon-600/30 text-racing-red flex-shrink-0">
+                <div className="w-12 h-12 flex items-center justify-center border border-carbon-600/30 text-racing-yellow flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading block mb-1">Location</span>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium block mb-1">Location</span>
                   <span className="text-white font-medium">{contact.address}</span>
                 </div>
               </div>
 
               {/* Social Media */}
               <div className="pt-6 border-t border-carbon-700/30">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading block mb-4">Follow Us</span>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium block mb-4">Follow Us</span>
                 <div className="flex gap-3">
                   {Object.entries(socialMedia).map(([platform, url]) => (
                     <a
@@ -93,7 +93,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 flex items-center justify-center border border-carbon-600/30 text-carbon-400 
-                      hover:border-racing-red hover:text-racing-red transition-all duration-300"
+                      hover:border-racing-yellow hover:text-racing-yellow transition-all duration-300"
                       aria-label={platform}
                     >
                       <SocialIcon platform={platform} />
@@ -108,7 +108,7 @@ export default function Contact() {
           <AnimatedSection direction="right" delay={0.1}>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading block mb-2">
+                <label className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium block mb-2">
                   Name
                 </label>
                 <input
@@ -117,12 +117,12 @@ export default function Contact() {
                   value={formState.name}
                   onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                   className="w-full px-5 py-3 bg-carbon-800 border border-carbon-600/30 text-white font-body 
-                  focus:border-racing-red focus:outline-none transition-colors duration-300 placeholder:text-carbon-500"
+                  focus:border-racing-yellow focus:outline-none transition-colors duration-300 placeholder:text-carbon-500"
                   placeholder="Your Name"
                 />
               </div>
               <div>
-                <label className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading block mb-2">
+                <label className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium block mb-2">
                   Email
                 </label>
                 <input
@@ -131,12 +131,12 @@ export default function Contact() {
                   value={formState.email}
                   onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                   className="w-full px-5 py-3 bg-carbon-800 border border-carbon-600/30 text-white font-body 
-                  focus:border-racing-red focus:outline-none transition-colors duration-300 placeholder:text-carbon-500"
+                  focus:border-racing-yellow focus:outline-none transition-colors duration-300 placeholder:text-carbon-500"
                   placeholder="your@email.com"
                 />
               </div>
               <div>
-                <label className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading block mb-2">
+                <label className="text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium block mb-2">
                   Message
                 </label>
                 <textarea
@@ -145,7 +145,7 @@ export default function Contact() {
                   value={formState.message}
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   className="w-full px-5 py-3 bg-carbon-800 border border-carbon-600/30 text-white font-body 
-                  focus:border-racing-red focus:outline-none transition-colors duration-300 resize-none placeholder:text-carbon-500"
+                  focus:border-racing-yellow focus:outline-none transition-colors duration-300 resize-none placeholder:text-carbon-500"
                   placeholder="Your message..."
                 />
               </div>

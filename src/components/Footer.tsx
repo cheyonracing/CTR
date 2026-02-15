@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-carbon-950 border-t border-carbon-700/30 overflow-hidden">
       {/* Red accent line */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-racing-red to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-racing-yellow to-transparent" />
 
       <div className="section-container pt-16 pb-8">
         {/* Top Grid */}
@@ -25,7 +25,7 @@ export default function Footer() {
                 <span className="font-heading font-bold text-lg tracking-wider text-white block">
                   {site.abbreviation}
                 </span>
-                <span className="text-[9px] uppercase tracking-[0.3em] text-carbon-400 font-heading">
+                <span className="text-[9px] uppercase tracking-[0.3em] text-carbon-400 font-body font-medium">
                   Racing Team
                 </span>
               </div>
@@ -42,7 +42,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 flex items-center justify-center border border-carbon-700/50 text-carbon-400 
-                  hover:border-racing-red hover:text-racing-red transition-all duration-300 text-xs font-heading uppercase"
+                  hover:border-racing-yellow hover:text-racing-yellow transition-all duration-300 text-xs font-body font-medium uppercase"
                   aria-label={platform}
                 >
                   {platform.charAt(0).toUpperCase()}
@@ -56,7 +56,7 @@ export default function Footer() {
             <h4 className="font-heading font-bold text-sm uppercase tracking-[0.2em] text-white mb-5">
               Quick Links
             </h4>
-            <div className="w-8 h-[2px] bg-racing-red mb-5" />
+            <div className="w-8 h-[2px] bg-racing-yellow mb-5" />
             <nav className="space-y-3">
               {[
                 { label: "Home", href: "/" },
@@ -69,7 +69,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="block text-sm text-carbon-400 hover:text-racing-red transition-colors duration-300 font-heading tracking-wider"
+                  className="block text-sm text-carbon-400 hover:text-racing-yellow transition-colors duration-300 font-heading tracking-wider"
                 >
                   {link.label}
                 </Link>
@@ -82,15 +82,15 @@ export default function Footer() {
             <h4 className="font-heading font-bold text-sm uppercase tracking-[0.2em] text-white mb-5">
               Drivers
             </h4>
-            <div className="w-8 h-[2px] bg-racing-red mb-5" />
+            <div className="w-8 h-[2px] bg-racing-yellow mb-5" />
             <nav className="space-y-3">
               {drivers.slice(0, 6).map((driver) => (
                 <Link
                   key={driver.id}
                   href={`/driver/${driver.id}`}
-                  className="block text-sm text-carbon-400 hover:text-racing-red transition-colors duration-300"
+                  className="block text-sm text-carbon-400 hover:text-racing-yellow transition-colors duration-300"
                 >
-                  <span className="text-carbon-500 font-heading mr-2">#{driver.number}</span>
+                  <span className="text-racing-yellow font-heading mr-2">#{driver.number}</span>
                   {driver.firstName} {driver.lastName}
                 </Link>
               ))}
@@ -102,11 +102,11 @@ export default function Footer() {
             <h4 className="font-heading font-bold text-sm uppercase tracking-[0.2em] text-white mb-5">
               Contact
             </h4>
-            <div className="w-8 h-[2px] bg-racing-red mb-5" />
+            <div className="w-8 h-[2px] bg-racing-yellow mb-5" />
             <div className="space-y-4 text-sm text-carbon-400">
               <p>{contact.address}</p>
               <p>
-                <a href={`mailto:${contact.email}`} className="hover:text-racing-red transition-colors">
+                <a href={`mailto:${contact.email}`} className="hover:text-racing-yellow transition-colors">
                   {contact.email}
                 </a>
               </p>
@@ -117,14 +117,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-carbon-700/30 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-carbon-500 font-heading tracking-wider">
+          <p className="text-xs text-carbon-500 font-body font-medium tracking-wider">
             © {year} {site.name}. All Rights Reserved.
           </p>
           <div className="flex gap-6">
-            <span className="text-xs text-carbon-500 font-heading tracking-wider">
+            <span className="text-xs text-carbon-500 font-body font-medium tracking-wider">
               {site.championship}
             </span>
-            <span className="text-xs text-carbon-500 font-heading tracking-wider">
+            <span className="text-xs text-carbon-500 font-body font-medium tracking-wider">
               Season {site.currentSeason}
             </span>
           </div>

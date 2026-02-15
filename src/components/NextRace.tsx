@@ -21,7 +21,7 @@ export default function NextRace() {
       <div className="absolute inset-0 bg-carbon-fiber opacity-20" />
 
       {/* Red glow accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-racing-red/5 rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-racing-yellow/5 rounded-full blur-[100px]" />
 
       <div className="relative z-10 section-container text-center">
         <AnimatedSection>
@@ -50,12 +50,12 @@ export default function NextRace() {
             </div>
             <div className="flex gap-2 ml-2">
               {nextRace.isStreetCircuit && (
-                <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-red/20 text-racing-red border border-racing-red/30">
+                <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-yellow/20 text-racing-yellow border border-racing-yellow/30">
                   Street
                 </span>
               )}
               {nextRace.isNightRace && (
-                <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-red/20 text-racing-red border border-racing-red/30">
+                <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-yellow/20 text-racing-yellow border border-racing-yellow/30">
                   Night
                 </span>
               )}
@@ -71,7 +71,7 @@ export default function NextRace() {
                 <div
                   key={race.round}
                   className={`p-5 bg-carbon-900 flex items-center gap-4 ${
-                    i === 0 ? "border-l-2 border-racing-red" : ""
+                    i === 0 ? "border-l-2 border-racing-yellow" : ""
                   }`}
                 >
                   <span className="font-heading font-bold text-3xl text-white/10">

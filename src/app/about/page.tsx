@@ -26,7 +26,7 @@ export default function AboutPage() {
           </div>
           <h1 className="heading-xl">
             <span className="text-white">CHENNAI </span>
-            <span className="text-racing-red">TURBO RIDERS</span>
+            <span className="text-racing-yellow">TURBO RIDERS</span>
           </h1>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function AboutPage() {
               <p className="body-text text-justify">{about.description2}</p>
             </div>
             <div className="relative inline-block">
-              <div className="absolute -top-3 -right-3 w-full h-full border-2 border-racing-red/20" />
+              <div className="absolute -top-3 -right-3 w-full h-full border-2 border-racing-yellow/20" />
               <img
                 src={about.image}
                 alt="CTR Team"
@@ -96,7 +96,7 @@ export default function AboutPage() {
               <h3 className="font-heading font-bold text-2xl text-white tracking-wide mb-1">
                 {teamPrincipal.name}
               </h3>
-              <p className="text-xs uppercase tracking-[0.2em] text-racing-red font-heading mb-6">
+              <p className="text-xs uppercase tracking-[0.2em] text-racing-yellow font-heading mb-6">
                 {teamPrincipal.title}
               </p>
               <p className="body-text">
@@ -126,7 +126,7 @@ export default function AboutPage() {
               { val: "FMSCI", label: "Sanctioned By" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <span className="block font-heading font-bold text-2xl text-racing-red">{stat.val}</span>
+                <span className="block font-heading font-bold text-2xl text-racing-yellow">{stat.val}</span>
                 <span className="block mt-2 text-[10px] uppercase tracking-[0.2em] text-carbon-400 font-heading">{stat.label}</span>
               </div>
             ))}

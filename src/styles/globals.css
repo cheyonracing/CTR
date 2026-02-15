@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -69,32 +69,33 @@
   }
 
   .label-text {
-    @apply font-heading font-semibold text-xs sm:text-sm uppercase tracking-[0.25em] text-racing-red;
+    @apply font-heading font-semibold text-xs sm:text-sm uppercase tracking-[0.25em] text-racing-yellow;
   }
 
   .body-text {
-    @apply font-body text-base md:text-lg text-carbon-300 leading-relaxed;
+    @apply font-body font-medium text-base md:text-lg text-carbon-300 leading-relaxed;
   }
 
   /* Red accent line */
   .red-line {
-    @apply w-12 h-[3px] bg-racing-red;
+    @apply w-12 h-[3px] bg-racing-yellow;
+    
   }
 
   .red-line-lg {
-    @apply w-20 h-1 bg-racing-red;
+    @apply w-20 h-1 bg-racing-yellow;
   }
 
   /* Button styles */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-8 py-3 bg-racing-red text-carbon-950 font-heading font-semibold uppercase tracking-wider text-sm 
-    transition-all duration-300 hover:bg-racing-red-dark hover:shadow-[0_0_30px_rgba(247,214,25,0.3)] 
+    @apply inline-flex items-center gap-2 px-8 py-3 bg-racing-yellow text-carbon-950 font-heading font-semibold uppercase tracking-wider text-sm 
+    transition-all duration-300 hover:bg-racing-yellow-dark hover:shadow-[0_0_30px_rgba(247,214,25,0.3)] 
     active:scale-95 relative overflow-hidden;
   }
 
   .btn-outline {
     @apply inline-flex items-center gap-2 px-8 py-3 border border-white/30 text-white font-heading font-semibold uppercase tracking-wider text-sm 
-    transition-all duration-300 hover:border-racing-red hover:text-racing-red hover:shadow-[0_0_20px_rgba(247,214,25,0.15)]
+    transition-all duration-300 hover:border-racing-yellow hover:text-racing-yellow hover:shadow-[0_0_20px_rgba(247,214,25,0.15)]
     active:scale-95;
   }
 

@@ -39,7 +39,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   return (
     <div className="flex items-center justify-center gap-3 sm:gap-5">
       {blocks.map((block, i) => (
-        <div key={block.label} className="flex items-center gap-3 sm:gap-5">
+        <div key={block.label} className="flex items-center gap-3 sm:gap-5 font-body font-medium">
           <div className="text-center">
             <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center bg-carbon-800 border border-carbon-600/30">
               <span
@@ -49,15 +49,15 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
                 {mounted ? String(block.value).padStart(2, "0") : "--"}
               </span>
               {/* Corner accent */}
-              <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-racing-red" />
-              <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-racing-red" />
+              <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-racing-yellow" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-racing-yellow" />
             </div>
             <span className="block mt-2 text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading">
               {block.label}
             </span>
           </div>
           {i < blocks.length - 1 && (
-            <span className="font-heading text-xl sm:text-2xl text-racing-red/50 -mt-5">:</span>
+            <span className="font-heading text-xl sm:text-2xl text-racing-yellow/50 -mt-5">:</span>
           )}
         </div>
       ))}

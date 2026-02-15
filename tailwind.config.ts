@@ -8,9 +8,9 @@ const config: Config = {
     extend: {
       colors: {
         racing: {
-          red: "#F7D619",
-          "red-dark": "#D4BB0A",
-          "red-glow": "rgba(247, 214, 25, 0.3)",
+          yellow: "#F7D619",
+          "yellow-dark": "#D4BB0A",
+          "yellow-glow": "rgba(247, 214, 25, 0.3)",
         },
         carbon: {
           950: "#0A0A0A",

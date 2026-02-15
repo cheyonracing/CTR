@@ -43,7 +43,7 @@ export default function CarSpecs() {
 
             <AnimatedSection delay={0.1}>
               <h2 className="heading-lg mb-3">
-                <span className="text-racing-red">{carSpecs.name.split(" ")[0]} </span>
+                <span className="text-racing-yellow">{carSpecs.name.split(" ")[0]} </span>
                 <span className="text-white">{carSpecs.name.split(" ").slice(1).join(" ")}</span>
               </h2>
             </AnimatedSection>
@@ -70,10 +70,10 @@ export default function CarSpecs() {
                     transition={{ delay: 0.3 + i * 0.05 }}
                     className="bg-carbon-900/80 p-5 group hover:bg-carbon-800/80 transition-colors duration-300"
                   >
-                    <span className="block text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-heading mb-1">
+                    <span className="block text-[10px] uppercase tracking-[0.25em] text-carbon-400 font-body font-medium mb-1">
                       {spec.label}
                     </span>
-                    <span className="block font-heading font-bold text-xl text-white group-hover:text-racing-red transition-colors duration-300">
+                    <span className="block font-heading font-bold text-xl text-white group-hover:text-racing-yellow transition-colors duration-300">
                       {spec.value}
                     </span>
                   </motion.div>
@@ -113,7 +113,7 @@ export default function CarSpecs() {
                     onClick={() => setActiveImage(i)}
                     className={`h-1 transition-all duration-300 ${
                       i === activeImage
-                        ? "w-10 bg-racing-red"
+                        ? "w-10 bg-racing-yellow"
                         : "w-6 bg-carbon-600 hover:bg-carbon-400"
                     }`}
                     aria-label={`View image ${i + 1}`}

@@ -25,20 +25,20 @@ export default function Gallery() {
           </div>
           <h2 className="heading-lg">
             <span className="text-white">GAL</span>
-            <span className="text-racing-red">LERY</span>
+            <span className="text-racing-yellow">LERY</span>
           </h2>
         </AnimatedSection>
 
         {/* Category Filters */}
-        <AnimatedSection delay={0.1} className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <AnimatedSection delay={0.1} className="flex flex-wrap items-center justify-center gap-3 mb-12 font-body font-bold">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
               className={`px-5 py-2 font-heading font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 border ${
                 filter === cat
-                  ? "bg-racing-red border-racing-red text-white"
-                  : "border-carbon-600/30 text-carbon-400 hover:border-racing-red/50 hover:text-white"
+                  ? "bg-racing-yellow border-racing-yellow text-white"
+                  : "border-carbon-600/30 text-carbon-400 hover:border-racing-yellow/50 hover:text-white"
               }`}
             >
               {cat}
@@ -69,12 +69,12 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-carbon-950/0 group-hover:bg-carbon-950/50 transition-all duration-300" />
                 <div className="absolute inset-0 flex items-end p-5 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                   <div>
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-racing-red font-heading">{item.category}</span>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-racing-yellow font-heading">{item.category}</span>
                     <p className="text-sm text-white font-heading mt-1">{item.alt}</p>
                   </div>
                 </div>
                 {/* Red line on hover */}
-                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-racing-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-racing-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </motion.div>
             ))}
           </AnimatePresence>
@@ -101,7 +101,7 @@ export default function Gallery() {
             />
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-6 right-6 text-white hover:text-racing-red transition-colors"
+              className="absolute top-6 right-6 text-white hover:text-racing-yellow transition-colors"
               aria-label="Close lightbox"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

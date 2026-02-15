@@ -34,7 +34,7 @@ export default function SchedulePage() {
           <span className="label-text">{races.seasonName}</span>
           <h1 className="heading-xl mt-3">
             <span className="text-white">RACE </span>
-            <span className="text-racing-red">CALENDAR</span>
+            <span className="text-racing-yellow">CALENDAR</span>
           </h1>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function SchedulePage() {
               <AnimatedSection key={race.round} delay={i * 0.1}>
                 <div
                   className={`bg-carbon-900 p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8
-                  ${i === 0 ? "border-l-2 border-racing-red" : ""}`}
+                  ${i === 0 ? "border-l-2 border-racing-yellow" : ""}`}
                 >
                   <span className="font-heading font-bold text-4xl text-white/10 w-14 flex-shrink-0">
                     {String(race.round).padStart(2, "0")}
@@ -80,7 +80,7 @@ export default function SchedulePage() {
                     <p className="text-sm text-carbon-400">
                       {race.flagEmoji} {race.location}, {race.country}
                     </p>
-                    <p className="text-xs text-carbon-500 mt-1">
+                    <p className="text-xs text-carbon-500 font-body font-medium mt-1">
                       {race.circuitLength} · {race.laps} Laps
                     </p>
                   </div>
@@ -91,12 +91,12 @@ export default function SchedulePage() {
                     </span>
                     <div className="flex gap-2">
                       {race.isStreetCircuit && (
-                        <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-red/20 text-racing-red border border-racing-red/30">
+                        <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-yellow/20 text-racing-yellow border border-racing-yellow/30">
                           Street
                         </span>
                       )}
                       {race.isNightRace && (
-                        <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-red/20 text-racing-red border border-racing-red/30">
+                        <span className="px-2 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-yellow/20 text-racing-yellow border border-racing-yellow/30">
                           Night
                         </span>
                       )}
@@ -154,7 +154,7 @@ export default function SchedulePage() {
                       >
                         {point}
                         {i < races.streetCircuit.route.length - 1 && (
-                          <span className="text-racing-red ml-2">→</span>
+                          <span className="text-racing-yellow ml-2">→</span>
                         )}
                       </span>
                     ))}

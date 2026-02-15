@@ -46,18 +46,18 @@ export default function NewsCarousel() {
             >
               {/* Left: Image */}
               <div className="relative overflow-hidden group order-2 lg:order-1">
-                <div className="absolute -inset-1 bg-racing-red/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute -inset-1 bg-racing-yellow/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img
                   src={currentNews.image1 || currentNews.image}
                   alt={currentNews.title}
-                  className="relative w-full h-full min-h-[300px] max-h-[400px] object-contain border border-carbon-700/30 group-hover:border-racing-red/30 transition-all duration-300"
+                  className="relative w-full h-full min-h-[300px] max-h-[400px] object-contain border border-carbon-700/30 group-hover:border-racing-yellow/30 transition-all duration-300"
                 />
               </div>
 
               {/* Right: Content */}
               <div className="space-y-6 order-1 lg:order-2">
                 <div>
-                  <span className="inline-block px-3 py-1 text-[9px] uppercase tracking-wider font-heading bg-racing-red text-carbon-950 mb-3">
+                  <span className="inline-block px-3 py-1 text-[9px] uppercase tracking-wider font-body font-bold bg-racing-yellow text-carbon-950 mb-3">
                     {currentNews.category}
                   </span>
                   <h3 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-tight leading-tight mb-4">
@@ -106,7 +106,7 @@ export default function NewsCarousel() {
                 onClick={() => setCurrentIndex(index)}
                 className={`h-1 transition-all duration-300 ${
                   index === currentIndex
-                    ? "w-8 bg-racing-red"
+                    ? "w-8 bg-racing-yellow"
                     : "w-4 bg-carbon-600 hover:bg-carbon-500"
                 }`}
                 aria-label={`Go to news ${index + 1}`}

@@ -21,7 +21,7 @@ export default function Achievements() {
           </div>
           <h2 className="heading-lg">
             <span className="text-white">ACHIEVE</span>
-            <span className="text-racing-red">MENTS</span>
+            <span className="text-racing-yellow">MENTS</span>
           </h2>
         </AnimatedSection>
 
@@ -42,11 +42,11 @@ export default function Achievements() {
               }`}
             >
               {/* Dot on timeline */}
-              <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-carbon-950 border-2 border-racing-red z-10" />
+              <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-carbon-950 border-2 border-racing-yellow z-10" />
 
               {/* Content Card */}
               <div className={`ml-16 md:ml-0 md:w-[45%] ${i % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8"}`}>
-                <span className="font-heading font-bold text-4xl text-racing-red/20 block mb-2">
+                <span className="font-heading font-bold text-4xl text-racing-yellow/20 block mb-2">
                   {item.year}
                 </span>
                 <h3 className="font-heading font-bold text-xl text-white mb-2 tracking-wide">

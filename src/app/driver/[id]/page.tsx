@@ -74,13 +74,13 @@ export default async function DriverPage({ params }: DriverPageProps) {
 
         {/* Hero Content */}
         <div className="relative z-10 section-container pb-16 pt-32">
-          <span className="label-text text-racing-red mb-2 block">
+          <span className="label-text text-racing-yellow mb-2 block">
             Official CTR Driver
           </span>
           <h1 className="font-heading font-black text-4xl sm:text-5xl md:text-7xl text-white uppercase tracking-tight leading-none mb-8">
             {driver.firstName}
             <br />
-            <span className="text-racing-red">{driver.lastName}</span>
+            <span className="text-racing-yellow">{driver.lastName}</span>
           </h1>
 
           {/* Quick Stats Pills */}
@@ -95,7 +95,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
                 key={s.label}
                 className="flex items-center gap-2 px-4 py-2 bg-carbon-900/60 backdrop-blur-sm border border-carbon-700/30"
               >
-                <span className="font-heading font-bold text-xl text-racing-red">
+                <span className="font-heading font-bold text-xl text-racing-yellow">
                   {s.value}
                 </span>
                 <span className="text-xs uppercase tracking-wider text-carbon-400 font-heading">
@@ -118,8 +118,8 @@ export default async function DriverPage({ params }: DriverPageProps) {
               { label: "Weight", value: driver.weight },
             ].map((info) => (
               <div key={info.label} className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-racing-red/10 flex items-center justify-center shrink-0">
-                  <div className="w-2 h-2 bg-racing-red" />
+                <div className="w-10 h-10 bg-racing-yellow/10 flex items-center justify-center shrink-0">
+                  <div className="w-2 h-2 bg-racing-yellow" />
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-white text-sm">
@@ -138,7 +138,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
       {/* Performance Stats */}
       <section className="py-16 md:py-24 bg-carbon-950">
         <div className="section-container max-w-4xl">
-          <span className="label-text text-racing-red mb-2 block">
+          <span className="label-text text-racing-yellow mb-2 block">
             Performance
           </span>
           <h2 className="heading-lg mb-12">Career Statistics</h2>
@@ -149,7 +149,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
               return (
                 <div
                   key={stat.label}
-                  className="carbon-card p-6 hover:border-racing-red/30 transition-colors"
+                  className="carbon-card p-6 hover:border-racing-yellow/30 transition-colors"
                 >
                   <div className="flex justify-between items-center mb-3">
                     <p className="text-xs uppercase tracking-wider text-carbon-400 font-heading">
@@ -161,7 +161,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
                   </div>
                   <div className="h-1 bg-carbon-800 w-full overflow-hidden">
                     <div
-                      className="h-full bg-racing-red transition-all duration-1000"
+                      className="h-full bg-racing-yellow transition-all duration-1000"
                       style={{ width: `${pct}%` }}
                     />
                   </div>
@@ -178,7 +178,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Bio Card */}
             <div>
-              <span className="label-text text-racing-red mb-2 block">
+              <span className="label-text text-racing-yellow mb-2 block">
                 About
               </span>
               <h2 className="heading-lg mb-6">Biography</h2>
@@ -187,7 +187,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
                 <p className="body-text leading-relaxed mb-6">
                   {driver.biography}
                 </p>
-                <blockquote className="border-l-2 border-racing-red pl-6 italic text-carbon-300 text-lg">
+                <blockquote className="border-l-2 border-racing-yellow pl-6 italic text-carbon-300 text-lg">
                   &ldquo;{driver.quote}&rdquo;
                 </blockquote>
               </div>
@@ -195,13 +195,13 @@ export default async function DriverPage({ params }: DriverPageProps) {
 
             {/* Driver Image */}
             <div className="relative overflow-hidden group">
-              <div className="absolute -inset-1 bg-racing-red/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-1 bg-racing-yellow/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
                 src={driver.image}
                 alt={fullName}
                 className="relative w-full h-auto min-h-[400px] object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-racing-red" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-racing-yellow" />
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@ export default async function DriverPage({ params }: DriverPageProps) {
       {/* Career Highlights */}
       <section className="py-16 md:py-24 bg-carbon-950">
         <div className="section-container max-w-4xl">
-          <span className="label-text text-racing-red mb-2 block">
+          <span className="label-text text-racing-yellow mb-2 block">
             Achievements
           </span>
           <h2 className="heading-lg mb-12">Career Highlights</h2>
@@ -219,11 +219,11 @@ export default async function DriverPage({ params }: DriverPageProps) {
             {driver.careerHighlights.map((highlight, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-5 carbon-card hover:border-racing-red/30 transition-colors group"
+                className="flex items-start gap-4 p-5 carbon-card hover:border-racing-yellow/30 transition-colors group"
               >
-                <div className="w-8 h-8 bg-racing-red/10 flex items-center justify-center shrink-0 group-hover:bg-racing-red/20 transition-colors">
+                <div className="w-8 h-8 bg-racing-yellow/10 flex items-center justify-center shrink-0 group-hover:bg-racing-yellow/20 transition-colors">
                   <svg
-                    className="w-4 h-4 text-racing-red"
+                    className="w-4 h-4 text-racing-yellow"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                   >

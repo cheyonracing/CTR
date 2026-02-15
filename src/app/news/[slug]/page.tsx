@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <div className="relative z-10 section-container pb-16 pt-32 max-w-4xl">
           <Link
             href="/news"
-            className="inline-flex items-center gap-2 text-racing-red text-sm font-heading uppercase tracking-wider mb-6 hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 text-racing-yellow text-sm font-heading uppercase tracking-wider mb-6 hover:text-white transition-colors"
           >
             <svg
               className="w-4 h-4 rotate-180"
@@ -124,11 +124,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             {/* Right: Portrait Image */}
             <div className="lg:col-span-1 sticky top-24">
               <div className="relative overflow-hidden group">
-                <div className="absolute -inset-1 bg-racing-red/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute -inset-1 bg-racing-yellow/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img
                   src={article.image1}
                   alt={article.title}
-                  className="relative w-full h-auto aspect-[3/4] object-cover border border-carbon-700/30 group-hover:border-racing-red/30 transition-all duration-300"
+                  className="relative w-full h-auto aspect-[3/4] object-cover border border-carbon-700/30 group-hover:border-racing-yellow/30 transition-all duration-300"
                 />
               </div>
             </div>
@@ -148,7 +148,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 <Link
                   key={a.id}
                   href={`/news/${a.slug}`}
-                  className="group carbon-card overflow-hidden hover:border-racing-red/30 transition-all duration-300"
+                  className="group carbon-card overflow-hidden hover:border-racing-yellow/30 transition-all duration-300"
                 >
                   <div className="relative h-40 overflow-hidden">
                     <img
@@ -159,10 +159,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     />
                   </div>
                   <div className="p-4">
-                    <span className="text-[9px] uppercase tracking-wider text-racing-red font-heading">
+                    <span className="text-[9px] uppercase tracking-wider text-racing-yellow font-heading">
                       {a.category}
                     </span>
-                    <h4 className="font-heading font-bold text-sm text-white mt-1 group-hover:text-racing-red transition-colors line-clamp-2">
+                    <h4 className="font-heading font-bold text-sm text-white mt-1 group-hover:text-racing-yellow transition-colors line-clamp-2">
                       {a.title}
                     </h4>
                     <p className="text-xs text-carbon-500 mt-2">
