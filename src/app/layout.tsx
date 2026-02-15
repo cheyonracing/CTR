@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
+import SplashScreen from "@/components/SplashScreen";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -39,7 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="bg-carbon-950 text-white antialiased">
-        {children}
+        <SplashScreen>
+          {children}
+        </SplashScreen>
       </body>
     </html>
   );
